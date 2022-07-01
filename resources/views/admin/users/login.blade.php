@@ -53,6 +53,6 @@
 </div>
 <!-- /.login-box -->
 <!-- jQuery -->
-@include('admin.footer');
+@include('admin.footer')
 </body>
 </html>
