@@ -16,7 +16,18 @@
                <td>'. $char .$val->name .'</td>
                <td>'.$val->active .'</td>
                <td>'.$val->updated_at .'</td>
-               <td>&nbsp;</td>
+               <td>
+                  <a class="btn btn-primary btn-sm" href="/admin/menus/edit/'. $val->id .'">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+
+                  <a href="#" class="btn btn-danger btn-sm" 
+                  onclick="removeRow('. $val->id .', \'/admin/menus/destroy\')"> 
+                  
+                  <i class="fa-solid fa-trash"></i>
+                  
+                  </a>
+               </td>
             </tr>
             ';
 

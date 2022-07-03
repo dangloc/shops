@@ -6,11 +6,11 @@
    <table class="table">
         <thead>
             <tr>
-                <th>ID </th>
+                <th style="width: 100px;">ID </th>
                 <th>Name </th>
                 <th>Active </th>
                 <th>Update </th>
-                <th>&nbsp;</th>
+                <th style="width: 100px;">&nbsp;</th>
             </tr>
         </thead>
 

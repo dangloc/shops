@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\Menu\CreateFormRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use App\Http\Services\menu\MenuService;
 
 class MenuController extends Controller
@@ -36,6 +37,22 @@ class MenuController extends Controller
         return view('admin.menu.list',[
             'title'=> 'List category new',
             'menus'=> $this-> menuService->getAll()
+        ]);
+    }
+
+    public function destroy(Request $request): JsonResponse
+    {
+
+        $result = $this->menuService->destroy($request);
+
+        if($result){
+            return response()->json([
+                'error'=> false,
+                'message'=> 'Delete category successfully'
+            ]);
+        }
+        return response()->json([
+            'error'=> true
         ]);
     }
 }
