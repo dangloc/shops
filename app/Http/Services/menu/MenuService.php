@@ -49,4 +49,22 @@ class MenuService
         
         return false;
     }
+
+    public function update($menu, $request) : bool
+    {
+        // $menu->fill($request->input());
+        // $menu->save();
+        if($request->input('parent_id') != $menu->id)
+        {
+            $menu->parent_id =(int) $request->input('parent_id');
+        }
+        $menu->name =(string) $request->input('name');     
+        $menu->description =(string) $request->input('description');
+        $menu->content =(string) $request->input('content');
+        $menu->active =(string) $request->input('active');
+        $menu->save();
+
+        Session::flash('success', 'Update Successfully');
+        return true;
+    }
 }

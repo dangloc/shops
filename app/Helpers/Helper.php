@@ -14,7 +14,7 @@
             <tr>
                <td>'.$val->id .'</td>
                <td>'. $char .$val->name .'</td>
-               <td>'.$val->active .'</td>
+               <td>'. self::active($val->active ).'</td>
                <td>'.$val->updated_at .'</td>
                <td>
                   <a class="btn btn-primary btn-sm" href="/admin/menus/edit/'. $val->id .'">
@@ -36,6 +36,11 @@
          }   
     }
     return $html;
+}
+
+public static function active($active = 0) : string
+{
+   return $active ==0 ? '<span class="btn btn-danger btn-xs">No</span>' : '<span class="btn btn-success btn-xs">Yes</span>';
 }
 
 

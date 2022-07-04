@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Services\menu\MenuService;
+use App\Models\Menu;
 
 class MenuController extends Controller
 {
@@ -54,6 +55,22 @@ class MenuController extends Controller
         return response()->json([
             'error'=> true
         ]);
+    }
+
+    public function show(Menu $menu){
+        // dd($menu->name);
+        return view('admin.menu.edit', [
+            'title'=>'Edit Category: ' . $menu->name,
+            'menu' => $menu,
+            'menus'=> $this-> menuService->getAll()
+        ]);
+    }
+
+    public function update(Menu $menu, Request $request){
+
+        $this->menuService->update($menu, $request);
+
+        return redirect('/admin/menus/list');
     }
 }
 
