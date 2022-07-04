@@ -10,11 +10,13 @@ Route::post('admin/users/login/store',[LoginController::class,'store']);
 
 Route::middleware(['auth'])->group(function () {
     
+    #admin
     Route::prefix('admin')->group(function () {
 
         Route::get('/', [MainController::class, 'index'])->name('admin');
         Route::get('main', [MainController::class, 'index']);
 
+        #menu
         Route::prefix('menus')->group(function (){
             Route::get('add', [MenuController::class, 'create']);
             Route::post('add', [MenuController::class, 'store']);
@@ -23,5 +25,10 @@ Route::middleware(['auth'])->group(function () {
             Route::post('edit/{menu}', [MenuController::class, 'update']);
             Route::DELETE('destroy', [MenuController::class, 'destroy']);
         }) ;
+
+        #product
+        Route::prefix('products')->group(function (){
+            
+        });
     });
 });
