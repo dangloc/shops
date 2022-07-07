@@ -58,6 +58,32 @@
               
             </ul>
           </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="fas fa-bars"></i>
+              <p style="padding-left: 10px">
+                    Product
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/admin/products/add" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product add</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/admin/products/list" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product list</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+          
           
         </ul>
       </nav>
