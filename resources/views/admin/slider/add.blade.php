@@ -44,7 +44,6 @@
                     <label for="no_active" class="custom-control-label">No</label>
                 </div>
             </div>
-
         </div>
 
         <div class="card-footer">

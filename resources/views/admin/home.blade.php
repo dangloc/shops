@@ -1,5 +1,5 @@
 @extends('admin.main')
 
 @section('content')
-xin chao
+xin chao 
 @endsection

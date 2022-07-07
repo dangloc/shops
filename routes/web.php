@@ -50,9 +50,9 @@ Route::middleware(['auth'])->group(function () {
                     Route::get('add', [SliderController::class, 'create']);
                     Route::get('list', [SliderController::class, 'index']);
                     Route::post('add', [SliderController::class, 'store']);
-                    // Route::get('edit/{slider}', [SliderController::class, 'show']);
-                    // Route::post('edit/{slider}', [SliderController::class, 'update']);
-                    // Route::DELETE('destroy', [SliderController::class, 'destroy']);
+                    Route::get('edit/{slider}', [SliderController::class, 'show']);
+                    Route::post('edit/{slider}', [SliderController::class, 'update']);
+                    Route::DELETE('destroy', [SliderController::class, 'destroy']);
                 });
     });
 });

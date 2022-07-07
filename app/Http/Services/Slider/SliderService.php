@@ -33,5 +33,32 @@ class SliderService
     {
         return SLider::orderbyDesc('id')-> paginate(15); 
     }
+
+    public function update($request, $slider){
+        try{
+            $slider->fill($request-> input());
+            $slider->save();
+            Session::flash('success', 'Update Slider successfully');
+        }
+        catch(\Exception $err){
+            Log::error($err->getMessage());
+
+            Session::flash('error', 'Slider Update failed');
+
+            return false;
+        }
+        return true;
+    }
+
+    public function destroy($request){
+        $slider = Slider::where('id', $request->input('id'))->first();
+        if ($slider) {
+            $path = str_replace('storage', 'public', $slider->thumb);
+            Storage::delete($path);
+            $slider->delete();
+            return true;
+        }
+        return false;
+    }
     
 }

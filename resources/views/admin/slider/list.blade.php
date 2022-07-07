@@ -24,7 +24,7 @@
                 <td>{{ $slider->url }}</td>
                 <td>
                     <a href="{{ $slider->thumb }}" target="_blank">
-                        <img src="{{ $slider->thumb }}" height="40px">
+                        <img src="{{ $slider->thumb }}" width="40px">
                     </a>
                 </td>
                 <td>{!! \App\Helpers\Helper::active($slider->active) !!}</td>
