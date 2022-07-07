@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Admin\Users\LoginController;
-use \App\Http\Controllers\Admin\MainController;
+use \App\Http\Controllers\MainController;
 use \App\Http\Controllers\Admin\MenuController;
 use \App\Http\Controllers\Admin\ProductController;
 use \App\Http\Controllers\Admin\SliderController;
+
 
 use GuzzleHttp\Handler\Proxy;
 
@@ -56,3 +57,5 @@ Route::middleware(['auth'])->group(function () {
                 });
     });
 });
+
+Route::get('/', [MainController::class, 'index']);
