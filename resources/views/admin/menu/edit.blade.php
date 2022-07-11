@@ -42,12 +42,13 @@
             </div>
 
             <div class="form-group">
-                <label for="menu">Image Category</label>
                 <input type="file"  class="form-control" id="upload">
                 <div id="image_show">
-
+                    <a href="{{ $menu->thumb }}" target="_blank">
+                        <img src="{{ $menu->thumb }}" width="100px">
+                    </a>
                 </div>
-                <input type="hidden" name="thumb" id="thumb">
+                <input type="hidden" name="thumb" value="{{ $menu->thumb }}" id="thumb">
             </div>
             
 
