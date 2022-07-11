@@ -24,7 +24,7 @@ class ProductService
     // public function show($id)
     // {
     //     return Product::where('id', $id)
-    //         ->where('active', 1)
+    //         ->where('active', 1) 
     //         ->with('menu')
     //         ->firstOrFail();
     // }

@@ -1,3 +1,5 @@
+
+<!-- Footer -->
 <footer class="bg3 p-t-75 p-b-32">
     <div class="container">
         <div class="row">
@@ -47,7 +49,7 @@
 
                     <li class="p-b-10">
                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                            Returns 
+                            Returns
                         </a>
                     </li>
 
@@ -134,9 +136,8 @@
 
             <p class="stext-107 cl6 txt-center">
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>. 
-Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
             </p>
         </div>
@@ -146,9 +147,9 @@ Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a>
 
 <!-- Back to top -->
 <div class="btn-back-to-top" id="myBtn">
-    <span class="symbol-btn-back-to-top">
-        <i class="zmdi zmdi-chevron-up"></i>
-    </span>
+		<span class="symbol-btn-back-to-top">
+			<i class="zmdi zmdi-chevron-up"></i>
+		</span>
 </div>
 
 <!-- Modal1 -->
@@ -202,7 +203,7 @@ Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6 col-lg-5 p-b-30">
                     <div class="p-r-50 p-t-5 p-lr-0-lg">
                         <h4 class="mtext-105 cl2 js-name-detail p-b-14">
@@ -210,13 +211,13 @@ Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a>
                         </h4>
 
                         <span class="mtext-106 cl2">
-                            $58.79
-                        </span>
+								$58.79
+							</span>
 
                         <p class="stext-102 cl3 p-t-23">
                             Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.
                         </p>
-                        
+
                         <!--  -->
                         <div class="p-t-33">
                             <div class="flex-w flex-r-m p-b-10">
@@ -275,7 +276,7 @@ Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a>
                                         Add to cart
                                     </button>
                                 </div>
-                            </div>	
+                            </div>
                         </div>
 
                         <!--  -->
@@ -305,7 +306,7 @@ Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a>
     </div>
 </div>
 
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 <script src="/template/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 <script src="/template/vendor/animsition/js/animsition.min.js"></script>
@@ -406,3 +407,4 @@ Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a>
 </script>
 <!--===============================================================================================-->
 <script src="/template/js/main.js"></script>
+<script src="/template/js/public.js"></script>
