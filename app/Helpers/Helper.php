@@ -14,6 +14,11 @@
             <tr>
                <td>'.$val->id .'</td>
                <td>'. $char .$val->name .'</td>
+               <td>
+                  <a href="'. $val->thumb .'" target="_blank">
+                     <img src="'. $val->thumb .'" width="40px">
+                  </a>
+               </td>
                <td>'. self::active($val->active ).'</td>
                <td>'.$val->updated_at .'</td>
                <td>

@@ -27,6 +27,7 @@ class MenuController extends Controller
     }
 
 
+
     public function store(CreateFormRequest $request)
     {
        $result = $this->menuService->create($request);

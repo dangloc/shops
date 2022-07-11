@@ -24,6 +24,7 @@ class MenuService
                 'parent_id'=>(int) $request-> input('parent_id'),
                 'description'=>(string) $request-> input('description'),
                 'content'=>(string) $request-> input('content'),
+                'thumb'=>(string) $request-> input('thumb'),
                 'active'=>(string) $request-> input('active'),
 
             ]);

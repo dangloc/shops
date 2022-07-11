@@ -8,6 +8,7 @@
             <tr>
                 <th style="width: 100px;">ID </th>
                 <th>Name </th>
+                <th>Image </th>
                 <th>Active </th>
                 <th>Update </th>
                 <th style="width: 100px;">&nbsp;</th>

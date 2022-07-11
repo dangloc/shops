@@ -5,6 +5,7 @@ use \App\Http\Controllers\Admin\Users\LoginController;
 use \App\Http\Controllers\Admin\MainController;
 use \App\Http\Controllers\Admin\MenuController;
 use \App\Http\Controllers\Admin\ProductController;
+use \App\Http\Controllers\Admin\SliderController;
 
 use GuzzleHttp\Handler\Proxy;
 
@@ -37,6 +38,16 @@ Route::middleware(['auth'])->group(function () {
             Route::get('edit/{product}', [ProductController::class, 'show']);
             Route::post('edit/{product}', [ProductController::class, 'update']);
             Route::DELETE('destroy', [ProductController::class, 'destroy']);
+        });
+
+         #slider
+         Route::prefix('sliders')->group(function (){
+            Route::get('add', [SliderController::class, 'create']);
+            Route::get('list', [SliderController::class, 'index']);
+            Route::post('add', [SliderController::class, 'store']);
+            Route::get('edit/{slider}', [SliderController::class, 'show']);
+            Route::post('edit/{slider}', [SliderController::class, 'update']);
+            Route::DELETE('destroy', [SliderController::class, 'destroy']);
         });
 
 
