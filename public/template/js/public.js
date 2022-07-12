@@ -7,21 +7,21 @@ $.ajaxSetup({
 function loadMore()
 {
     const page = $('#page').val();
+
+    const pageNum = parseInt(page);
     $.ajax({
         type : 'POST',
         dataType : 'JSON',
         data : { page },
         url : '/services/load-product',
         success : function (result) {
-
-            console.log(result);
-            // if (result.html !== '') {
-            //     $('#loadProduct').append(result.html);
-            //     $('#page').val(page + 1);
-            // } else {
-            //     alert('Product loader successfully');
-            //     $('#button-loadMore').css('display', 'none');
-            // }
+            if (result.html !== '') {
+                $('#loadProduct').append(result.html);
+                $('#page').val(pageNum + 1);
+            } else {
+                alert('Product loader success');
+                $('#button-loadMore').css('display', 'none');
+            }
         }
     })
 }

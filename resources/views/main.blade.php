@@ -343,7 +343,7 @@
 				</div>
 			</div>
 
-				<div class="row isotope-grid" id="loadProduct">
+				<div id="loadProduct">
 					@include('products.list')
 				</div>
 			<!-- Load more -->
