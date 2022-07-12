@@ -1,5 +1,7 @@
 @extends('admin.main')
 
 @section('content')
-xin chao
+<p>
+    <img src="{{url('/template/images/aervio-animation.gif')}}" alt="web Admin" width="65%">
+</p>
 @endsection
