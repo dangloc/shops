@@ -20,4 +20,22 @@ class ProductService
             ->limit(self::LIMIT)
             ->get();
     }
+
+    public function show($id)
+    {
+        return Product::where('id', $id)
+            ->where('active', 1)
+            ->with('menu')
+            ->firstOrFail();
+    }
+
+    public function more($id)
+    {
+        return Product::select('id', 'name', 'price', 'price_sale', 'thumb')
+            ->where('active', 1)
+            ->where('id', '!=', $id)
+            ->orderByDesc('id')
+            ->limit(8)
+            ->get();
+    }
 }
