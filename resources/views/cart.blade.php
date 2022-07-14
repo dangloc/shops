@@ -14,7 +14,7 @@
         <div class="header-cart-content flex-w js-pscroll">
             @php $sumPriceCart = 0; @endphp
             <ul class="header-cart-wrapitem w-full">
-                @if (count($products) > 0)
+                @if (!is_null(\Session::get('carts')))
                     @foreach($products as $key => $product)
                         @php
                             $price = \App\Helpers\Helper::price($product->price, $product->price_sale);
