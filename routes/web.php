@@ -6,11 +6,20 @@ use App\Http\Controllers\Admin\MainController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\UserController;
 
 use GuzzleHttp\Handler\Proxy;
 
+Route::get('auth/login', [UserController::class, 'login']);
+Route::post('auth/login/store', [UserController::class, 'store']);
+Route::get('auth/register', [UserController::class, 'register']);
+Route::post('auth/register/storeRegister', [UserController::class, 'storeRegister']);
+Route::get('auth/logout', [UserController::class, 'logout']);
+
+
 Route::get('admin/users/login', [LoginController::class,'index'])->name('login');
 Route::post('admin/users/login/store',[LoginController::class,'store']);
+Route::get('admin/users/logout', [LoginController::class, 'logout']);
 
 Route::middleware(['auth'])->group(function () {
     

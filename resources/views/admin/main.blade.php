@@ -19,41 +19,52 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-user fa-fw"></i>
+          Xin chào: <b>{{Auth::user()->fullname}}</b>
+          <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-user fa-fw"></i> Quản lí nhân viên
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="{{url('admin/staff/profile')}}" class="dropdown-item">
+            <i class="fas fa-user-edit fa-fw"></i> Thông tin tài khoản
+
+          </a>
+
+          <div class="dropdown-divider"></div>
+          <a href="{{url('admin/users/logout')}}" class="dropdown-item dropdown-footer">Thoát</a>
+        </div>
+      </li>
     </ul>
   </nav>
-  <!-- /.navbar -->
   @include('admin.sidebar')
-  <!-- Main Sidebar Container -->
 
   <div class="content-wrapper">
-    <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
         @include('admin.alert')
         <div class="row">
-          <!-- left column -->
           <div class="col-md-12">
-            <!-- jquery validation -->
             <div class="card card-primary mt-3">
               <div class="card-header">
                 <h3 class="card-title">{{$title}}</h3> 
               </div>
-             <!-- /.card-header -->
              @yield('content')
             </div>
-            <!-- /.card -->
             </div>
-          <!--/.col (left) -->
-          <!-- right column -->
           <div class="col-md-6">
-
           </div>
-          <!--/.col (right) -->
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
+      </div>
     </section>
-    <!-- /.content -->
   </div>
 
 

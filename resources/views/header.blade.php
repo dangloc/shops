@@ -1,4 +1,7 @@
-@php $menusHtml = \App\Helpers\Helper::menus($menus); @endphp
+@php $menusHtml = \App\Helpers\Helper::menus($menus); 
+	$users = Auth::user();
+@endphp
+
 <!-- Header desktop -->
 		<div class="container-menu-desktop">
 			
@@ -10,19 +13,28 @@
 						Free shipping for standard order over $100
 					</div>
 
+					
+					@if(isset($users))
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
+							{{$users->name}}
 						</a>
 
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							USD
+						<a href="auth/logout" class="flex-c-m trans-04 p-lr-25">
+							Logout
 						</a>
 					</div>
+					
+					@else
+					<div class="right-top-bar flex-w h-full">
+						<a href="/auth/login" class="flex-c-m trans-04 p-lr-25">
+							Login
+						</a>
+						<a href="/auth/register" class="flex-c-m trans-04 p-lr-25">
+							Register
+						</a>
+					</div>
+					@endif
 				</div>
 			</div>
 
@@ -31,7 +43,7 @@
 					
 					<!-- Logo desktop -->		
 					<a href="#" class="logo">
-						<img src="/template/images/icons/logo.png" alt="IMG-LOGO" >
+						<img src="/template/images/icons/logo-2.png" alt="IMG-LOGO" >
 					</a>
 
 					<!-- Menu desktop -->

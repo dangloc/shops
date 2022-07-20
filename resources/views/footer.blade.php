@@ -73,7 +73,7 @@
 					</h4>
 
 					<p class="stext-107 cl7 size-201">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+						Any questions? Let us know in store at 29th PhuocHoa, KhueTrung, DaNang, VietNam or call on (+84) 765 530 320
 					</p>
 
 					<div class="p-t-27">
@@ -136,7 +136,7 @@
 
 				<p class="stext-107 cl6 txt-center">
 					
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
 
 
 				</p>
